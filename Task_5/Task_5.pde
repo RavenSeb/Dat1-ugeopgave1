@@ -9,13 +9,14 @@ void setup() {
 
 void MethodOne()
 {
+  String output="";
   int i = 1000; // You are not allowed to change this line.
 
   int max = 10;
 
   if (i > max)
   {
-    String output = "i is greater than "+max+".";
+    output = "Method one: i is greater than "+max+".";
   }
   println(output);
 }
@@ -35,25 +36,33 @@ String weekDay7 = "Sunday";
 
 void MethodTwo()
 {
-  int weekDay = 1; // 1 = Monday, 7 = Sunday.
+  int weekDay = 7; // 1 = Monday, 7 = Sunday.
   boolean weekend = false;
+  {
+    // Print the name of the weekday here
+    if (weekDay == 1)
+    {
+      println("It is Monday!");
+    } else if (weekDay == 2)
+      println("It is Tuesday!");
 
-  if (weekDay < 5)
-  {
-    weekend = false;
-  } else
-  {
-    weekend = true;
-    println("IT IS WEEKEND!");
+    else if (weekDay == 3)
+      println("It is Wednesday!");
+
+    else if (weekDay == 4)
+      println("It is Thursday!");
+
+    else if (weekDay == 5)
+      println("It is Friday! HUURAAY!");
+
+    else if (weekDay == 6)
+      println("It is Saturday -");
+
+    else if (weekDay == 7)
+      println("It is Sunday ... weekend is almost over though :c");
   }
 
-  // Print the name of the weekday here
-  if (weekDay == 1)
-  {
-    println("It is Monday!");
-  } else if (weekDay == 2)
-  {
-    println("It is Tueday!");
-  }
+  //Print if it is weekend here
+  if (weekDay == 6)
+    println("and it is weekend!");
 }
-//Print if it is weekend here
